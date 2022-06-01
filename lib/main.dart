@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:internship/toast/toast.dart';
 
-class  MyApp extends StatelessWidget {
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text("Arpan"),
-      ),
+    return MaterialApp(
+      home: toast(),
     );
   }
 }
