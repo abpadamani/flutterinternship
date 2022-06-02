@@ -23,32 +23,19 @@ class align_widget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
-          height: 20,
-        ),
-        Icon(CupertinoIcons.location),
-        SizedBox(
-          height: 10,
-        ),
-        Center(
-            child: Text(
-          "Surat",
-          style: TextStyle(fontSize: 30),
-        )),
-        Image.network(
-          "https://qph.cf2.quoracdn.net/main-qimg-eb9cb9c6f24afa88c5d5c195563d4349.webp",
-          fit: BoxFit.fitHeight,
-        ),
-        Image.network(
-          "https://qph.cf2.quoracdn.net/main-qimg-3f4fb561011455a9e3e37418fbb9a916.webp",
-          fit: BoxFit.fitHeight,
-        ),
-        SingleChildScrollView(
+        Expanded(
           child: Image.network(
-            "https://qph.cf2.quoracdn.net/main-qimg-eb9cb9c6f24afa88c5d5c195563d4349.webp",
-            fit: BoxFit.fitHeight,
-          ),
+              'https://qph.cf2.quoracdn.net/main-qimg-38a642f81d73b327e819c70497a8d847.webp'),
+        ),
+        Expanded(
+          child: Image.network(
+              'https://dontgetserious.com/wp-content/uploads/2016/07/surat-is-beautiful.jpg'),
+        ),
+        Expanded(
+          child: Image.network(
+              'https://i.pinimg.com/originals/5b/30/89/5b3089ef299973e35e16d4cbd9a934f2.jpg'),
         ),
       ],
     );
