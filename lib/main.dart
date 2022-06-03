@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:internship/snackbar/snackbar.dart';
+import 'package:internship/pass-retrive-data/page2.dart';
+import 'pass-retrive-data/page1.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: snackbar(),
+      home: Screen1(),
     );
   }
 }
