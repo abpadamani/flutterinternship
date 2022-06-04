@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'ScrollList/slist.dart';
+
+import 'loginscreen/login.dart';
+
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -11,7 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Mylist(),
+      debugShowCheckedModeBanner: false,
+      home: MyLogin(),
+  initialRoute: 'login',
+      routes: {
+        'login':(context) => MyLogin(),
+
+      },
+
+
     );
   }
 }
