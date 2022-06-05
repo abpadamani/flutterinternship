@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
+import 'package:internship/pages/pageone.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -68,8 +69,15 @@ class _MyLoginState extends State<MyLogin> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextButton(
-                            onPressed: () {},
+                        RaisedButton(
+                            elevation: 3.0,
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Mypage()),
+                              );
+                            },
                             child: Text(
                               "Sign Up",
                               style: GoogleFonts.ubuntu(
@@ -80,7 +88,7 @@ class _MyLoginState extends State<MyLogin> {
                           radius: 30,
                           child: Icon(
                             CupertinoIcons.arrow_right,
-                            color: Colors.blue,
+                            color: Colors.white,
                           ),
                           backgroundColor: Color(0xff4c505b),
                         ),
