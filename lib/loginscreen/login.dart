@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
+import 'package:internship/customscrollview/custom.dart';
 import 'package:internship/pages/pageone.dart';
 import 'package:internship/tab/tabmain.dart';
 
@@ -76,7 +77,7 @@ class _MyLoginState extends State<MyLogin> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Mytab()),
+                                    builder: (context) => Mycustom()),
                               );
                             },
                             child: Text(
