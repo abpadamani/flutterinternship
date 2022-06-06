@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:internship/singlechildscrollview/singlechild.dart';
 
 import 'loginscreen/login.dart';
@@ -15,9 +16,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyLogin(),
+      theme: ThemeData(
+          textTheme: GoogleFonts.ubuntuTextTheme(
+        Theme.of(context).textTheme,
+      )),
       initialRoute: 'login',
       routes: {
-        'login': (context) => Mysingle(),
+        'login': (context) => MyLogin(),
       },
     );
   }
