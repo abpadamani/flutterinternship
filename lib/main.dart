@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:internship/singlechildscrollview/singlechild.dart';
 
 import 'loginscreen/login.dart';
-
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -15,13 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyLogin(),
-  initialRoute: 'login',
+      initialRoute: 'login',
       routes: {
-        'login':(context) => MyLogin(),
-
+        'login': (context) => Mysingle(),
       },
-
-
     );
   }
 }
