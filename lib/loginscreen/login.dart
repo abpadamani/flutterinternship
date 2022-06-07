@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cupertino_icons/cupertino_icons.dart';
 import 'package:internship/bottomsheetdialog/mainbottom.dart';
 import 'package:internship/customscrollview/custom.dart';
+import 'package:internship/drawer/drawer.dart';
 import 'package:internship/nested-scrollview/nested.dart';
 import 'package:internship/pages/pageone.dart';
 import 'package:internship/tab/tabmain.dart';

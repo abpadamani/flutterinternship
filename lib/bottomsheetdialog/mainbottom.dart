@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship/drawer/drawer.dart';
 
 class Mybottom extends StatefulWidget {
   const Mybottom({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class _MybottomState extends State<Mybottom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Mydrawer(),
       appBar: AppBar(
         title: Text("Bottom Sheet Dialog"),
         centerTitle: true,
