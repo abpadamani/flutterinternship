@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:internship/alertdialogue/alert.dart';
 import 'package:internship/singlechildscrollview/singlechild.dart';
 
 import 'loginscreen/login.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       )),
       initialRoute: 'login',
       routes: {
-        'login': (context) => MyLogin(),
+        'login': (context) => Myalert(),
       },
     );
   }
