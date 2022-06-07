@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:email_validator/email_validator.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -45,63 +46,79 @@ class _MyLoginState extends State<MyLogin> {
                     top: MediaQuery.of(context).size.height * 0.5,
                     left: 35,
                     right: 35),
-                child: Column(
-                  children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                          focusColor: Color(0xff4c505b),
-                          fillColor: Colors.white,
-                          filled: true,
-                          hintText: "Username or E-mail Address",
-                          hintStyle: GoogleFonts.ubuntu(),
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black),
-                              borderRadius: BorderRadius.circular(10))),
-                    ),
-                    SizedBox(height: 10),
-                    TextFormField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          fillColor: Colors.white,
-                          filled: true,
-                          hintText: "Password",
-                          hintStyle: GoogleFonts.ubuntu(),
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black),
-                              borderRadius: BorderRadius.circular(10))),
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        RaisedButton(
-                            elevation: 3.0,
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Mybottom()),
-                              );
-                            },
-                            child: Text(
-                              "Sign Up",
-                              style: GoogleFonts.ubuntu(
-                                  textStyle: TextStyle(
-                                      color: Colors.blue, fontSize: 25)),
-                            )),
-                        CircleAvatar(
-                          radius: 30,
-                          child: Icon(
-                            CupertinoIcons.arrow_right,
-                            color: Colors.white,
+                child: Form(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        decoration: InputDecoration(
+                            focusColor: Color(0xff4c505b),
+                            fillColor: Colors.white,
+                            filled: true,
+                            hintText: " E-mail Address",
+                            hintStyle: GoogleFonts.ubuntu(),
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                                borderRadius: BorderRadius.circular(10))),
+                        validator: (email) {
+                          if (email != null &&
+                              !EmailValidator.validate(email)) {
+                            return 'enter a valid email address';
+                          }
+                        },
+                      ),
+                      SizedBox(height: 10),
+                      TextFormField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            fillColor: Colors.white,
+                            filled: true,
+                            hintText: "Password",
+                            hintStyle: GoogleFonts.ubuntu(),
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                                borderRadius: BorderRadius.circular(10))),
+                        validator: (value) {
+                          if (value != null && value.length < 7) {
+                            return 'Enter at least 7 characters.';
+                          } else {
+                            return null;
+                          }
+                        },
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          RaisedButton(
+                              elevation: 3.0,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Mybottom()),
+                                );
+                              },
+                              child: Text(
+                                "Sign Up",
+                                style: GoogleFonts.ubuntu(
+                                    textStyle: TextStyle(
+                                        color: Colors.blue, fontSize: 25)),
+                              )),
+                          CircleAvatar(
+                            radius: 30,
+                            child: Icon(
+                              CupertinoIcons.arrow_right,
+                              color: Colors.white,
+                            ),
+                            backgroundColor: Color(0xff4c505b),
                           ),
-                          backgroundColor: Color(0xff4c505b),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

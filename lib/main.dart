@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       )),
       initialRoute: 'login',
       routes: {
-        'login': (context) => Myalert(),
+        'login': (context) => MyLogin(),
       },
     );
   }
