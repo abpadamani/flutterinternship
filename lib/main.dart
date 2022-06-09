@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internship/alertdialogue/alert.dart';
+import 'package:internship/apicall/screen/homeScreen.dart';
 import 'package:internship/singlechildscrollview/singlechild.dart';
 
 import 'loginscreen/login.dart';
@@ -16,15 +17,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyLogin(),
+      home: HomePage(),
       theme: ThemeData(
           textTheme: GoogleFonts.ubuntuTextTheme(
         Theme.of(context).textTheme,
       )),
-      initialRoute: 'login',
-      routes: {
-        'login': (context) => MyLogin(),
-      },
+      // initialRoute: 'login',
+      // routes: {
+      //   'login': (context) => MyLogin(),
+      // },
     );
   }
 }
