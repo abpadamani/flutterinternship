@@ -27,36 +27,12 @@ class Myback extends StatelessWidget {
         }
       },
       child: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(title: Text("Hello..")),
         body: Center(
           child: Text("Hello , World"),
         ),
       ),
-    );
-  }
-}
-
-class showDialog extends StatelessWidget {
-  const showDialog({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return AlertDialog(
-      title: Text("Exit ? "),
-      actions: [
-        FlatButton(
-            onPressed: () {
-              Navigator.pop(context, false);
-            },
-            child: Text("No")),
-        FlatButton(
-            onPressed: () {
-              Navigator.pop(context, true);
-            },
-            child: Text("Yes"))
-      ],
     );
   }
 }
