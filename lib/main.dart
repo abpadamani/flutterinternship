@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internship/alertdialogue/alert.dart';
+import 'package:internship/mediaquery/media.dart';
 
 import 'package:internship/singlechildscrollview/singlechild.dart';
 import 'package:internship/streamBuilder/Mystream.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Myback(),
+      home: Mymedia(),
       theme: ThemeData(
           textTheme: GoogleFonts.ubuntuTextTheme(
         Theme.of(context).textTheme,
