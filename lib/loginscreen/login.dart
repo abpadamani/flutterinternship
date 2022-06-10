@@ -51,6 +51,7 @@ class _MyLoginState extends State<MyLogin> {
                   child: Column(
                     children: [
                       TextFormField(
+                        autofocus: true,
                         decoration: InputDecoration(
                             focusColor: Color(0xff4c505b),
                             fillColor: Colors.white,
