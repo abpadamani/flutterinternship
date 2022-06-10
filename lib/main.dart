@@ -6,6 +6,7 @@ import 'package:internship/mediaquery/media.dart';
 import 'package:internship/singlechildscrollview/singlechild.dart';
 import 'package:internship/streamBuilder/Mystream.dart';
 
+import 'Inkwell/loginpage.dart';
 import 'backpressedmanaged/back.dart';
 import 'data-passing/screentwo.dart';
 import 'loginscreen/login.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Myscreentwo(),
+      home: login_page(),
       theme: ThemeData(
           textTheme: GoogleFonts.ubuntuTextTheme(
         Theme.of(context).textTheme,
