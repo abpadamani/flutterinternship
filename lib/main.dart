@@ -8,6 +8,7 @@ import 'package:internship/streamBuilder/Mystream.dart';
 
 import 'backpressedmanaged/back.dart';
 import 'loginscreen/login.dart';
+import 'orientation/oriantation.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Mymedia(),
+      home: Myscreen(),
       theme: ThemeData(
           textTheme: GoogleFonts.ubuntuTextTheme(
         Theme.of(context).textTheme,
