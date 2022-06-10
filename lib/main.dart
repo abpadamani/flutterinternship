@@ -11,6 +11,7 @@ import 'backpressedmanaged/back.dart';
 import 'data-passing/screentwo.dart';
 import 'loginscreen/login.dart';
 import 'orientation/oriantation.dart';
+import 'resUI/screens/home/home.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: login_page(),
+      home: HomeScreen(),
       theme: ThemeData(
           textTheme: GoogleFonts.ubuntuTextTheme(
         Theme.of(context).textTheme,
