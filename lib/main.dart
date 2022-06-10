@@ -7,6 +7,7 @@ import 'package:internship/singlechildscrollview/singlechild.dart';
 import 'package:internship/streamBuilder/Mystream.dart';
 
 import 'backpressedmanaged/back.dart';
+import 'data-passing/screentwo.dart';
 import 'loginscreen/login.dart';
 import 'orientation/oriantation.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Myscreen(),
+      home: Myscreentwo(),
       theme: ThemeData(
           textTheme: GoogleFonts.ubuntuTextTheme(
         Theme.of(context).textTheme,

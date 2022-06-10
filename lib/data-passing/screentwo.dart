@@ -1,0 +1,136 @@
+import 'dart:ui';
+import 'package:email_validator/email_validator.dart';
+import 'screenone.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
+import 'package:internship/bottomsheetdialog/mainbottom.dart';
+import 'package:internship/customscrollview/custom.dart';
+import 'package:internship/drawer/drawer.dart';
+import 'package:internship/nested-scrollview/nested.dart';
+import 'package:internship/pages/pageone.dart';
+import 'package:internship/tab/tabmain.dart';
+
+import '../bottomnavbar/mainhomepage.dart';
+
+class Myscreentwo extends StatefulWidget {
+  const Myscreentwo({Key? key}) : super(key: key);
+
+  @override
+  State<Myscreentwo> createState() => _Myscreentwo();
+}
+
+class _Myscreentwo extends State<Myscreentwo> {
+  TextEditingController _email = new TextEditingController();
+  TextEditingController _password = new TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/img/login.png"), fit: BoxFit.fill)),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Stack(
+          children: [
+            Container(
+              padding: EdgeInsets.only(left: 35, top: 150),
+              child: Text(
+                "Welcome \n Guys",
+                style: GoogleFonts.ubuntu(
+                    textStyle: TextStyle(color: Colors.white, fontSize: 35)),
+              ),
+            ),
+            SingleChildScrollView(
+              child: Container(
+                padding: EdgeInsets.only(
+                    top: MediaQuery.of(context).size.height * 0.5,
+                    left: 35,
+                    right: 35),
+                child: Form(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        controller: _email,
+                        decoration: InputDecoration(
+                            focusColor: Color(0xff4c505b),
+                            fillColor: Colors.white,
+                            filled: true,
+                            hintText: " E-mail Address",
+                            hintStyle: GoogleFonts.ubuntu(),
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                                borderRadius: BorderRadius.circular(10))),
+                        validator: (email) {
+                          if (email != null &&
+                              !EmailValidator.validate(email)) {
+                            return 'enter a valid email address';
+                          }
+                        },
+                      ),
+                      SizedBox(height: 10),
+                      TextFormField(
+                        controller: _password,
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            fillColor: Colors.white,
+                            filled: true,
+                            hintText: "Password",
+                            hintStyle: GoogleFonts.ubuntu(),
+                            border: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.black),
+                                borderRadius: BorderRadius.circular(10))),
+                        validator: (value) {
+                          if (value != null && value.length < 7) {
+                            return 'Enter at least 7 characters.';
+                          } else {
+                            return null;
+                          }
+                        },
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          RaisedButton(
+                              elevation: 3.0,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Myscreenone(
+                                          email: _email.text,
+                                          password: _password.text)),
+                                );
+                              },
+                              child: Text(
+                                "Sign Up",
+                                style: GoogleFonts.ubuntu(
+                                    textStyle: TextStyle(
+                                        color: Colors.blue, fontSize: 25)),
+                              )),
+                          CircleAvatar(
+                            radius: 30,
+                            child: Icon(
+                              CupertinoIcons.arrow_right,
+                              color: Colors.white,
+                            ),
+                            backgroundColor: Color(0xff4c505b),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
