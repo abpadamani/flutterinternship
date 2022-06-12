@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:internship/Buttonss/buttonss.dart';
+
+import 'avatar/profile.dart';
 import 'package:internship/camera/mycamera.dart';
 
 void main() => runApp(const MyApp());
@@ -9,9 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Retrieve Text Input',
-      home: Mybuttons(),
+    return MaterialApp(
+      title: 'InternShip',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.ubuntuTextTheme(),
+      ),
+      home: Myprofile(),
     );
   }
 }
