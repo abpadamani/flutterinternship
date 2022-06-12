@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internship/Buttonss/buttonss.dart';
 import 'package:internship/camera/mycamera.dart';
 
 void main() => runApp(const MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Retrieve Text Input',
-      home: Mycamera(),
+      home: Mybuttons(),
     );
   }
 }
