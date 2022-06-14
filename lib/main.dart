@@ -10,6 +10,8 @@ import 'package:internship/swipe-to-dismiss/swipe.dart';
 import 'avatar/profile.dart';
 import 'package:internship/camera/mycamera.dart';
 
+import 'd&t-picker/datepicker.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.ubuntuTextTheme(),
       ),
-      home: Mysimple(),
+      home: Mydate(),
     );
   }
 }
