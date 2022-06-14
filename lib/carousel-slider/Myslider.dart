@@ -44,13 +44,16 @@ class Myslider extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                     image: DecorationImage(
+                        fit: BoxFit.cover,
                         image: NetworkImage(
-                            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png')),
+                            'https://thumbs.dreamstime.com/b/html-icon-vector-isolated-white-background-logo-concept-h-html-icon-vector-isolated-white-background-logo-concept-html-125792762.jpg')),
                   ),
                 ),
               ],
               options: CarouselOptions(
                 height: 400,
+                enlargeCenterPage: true,
+                reverse: true,
               ))
         ],
       ),
