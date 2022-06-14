@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internship/Buttonss/buttonss.dart';
 import 'package:internship/carousel-slider/Myslider.dart';
+import 'package:internship/expanshio-tile/expanshion.dart';
 
 import 'avatar/profile.dart';
 import 'package:internship/camera/mycamera.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.ubuntuTextTheme(),
       ),
-      home: Myslider(),
+      home: Myexpanshio(),
     );
   }
 }
