@@ -4,6 +4,7 @@ import 'package:internship/Buttonss/buttonss.dart';
 import 'package:internship/carousel-slider/Myslider.dart';
 import 'package:internship/expanshio-tile/expanshion.dart';
 import 'package:internship/page-indicators/mainpageindicator.dart';
+import 'package:internship/reordereable/maindrag.dart';
 import 'package:internship/simple-dialogue/simple.dart';
 import 'package:internship/swipe-to-dismiss/swipe.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.ubuntuTextTheme(),
       ),
-      home: Mydate(),
+      home: MainPage(),
     );
   }
 }
